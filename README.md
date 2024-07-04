@@ -17,4 +17,4 @@ Requirements:
 TODO:
 - Detect if the input is a valid UUID otherwise it is a Username.
 
-Thanks to https://github.com/koalaman/shellcheck for helping me to catch potential bugs and also https://github.com/matejak/argbash/ for generating the code to handle command line arguments!
+Thanks to [this wiki.vg page](https://wiki.vg/Mojang_API) for providing documentations, https://github.com/koalaman/shellcheck for helping me to catch potential bugs, and also https://github.com/matejak/argbash/ for generating the code to handle command line arguments!
