@@ -326,5 +326,5 @@ done
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-# originally created with vim expandtab off and tabstop of 8
-# vim: set noexpandtab tabstop=8:
+# originally created with vim expandtab off and tabstop=shiftwidth=8
+# vim: set noexpandtab tabstop=8 shiftwidth=8:

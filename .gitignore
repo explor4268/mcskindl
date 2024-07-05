@@ -1,2 +1,24 @@
+# Skin files
 *.png
 skins/
+
+# Prevent clutter. See https://github.com/github/gitignore/tree/main/Global
+*.swp
+[._]*.un~
+.netrwhist
+Thumbs.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.exe
+*.msi
+*.lnk
+.DS_Store
+__MACOSX
+.Spotlight-V100
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+.nomedia
