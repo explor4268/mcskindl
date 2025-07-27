@@ -1,19 +1,17 @@
 # mcskindl
 
-mcskindl is a Minecraft: Java Edition player skin downloader in bash(1)
-
-**NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.**
+mcskindl is a Minecraft: Java Edition player skin downloader written in `bash`.
 
 ## Requirements
 
-- bash (tested with 5.2.x, POSIX shell version might be available later)
-- curl for fetching (if HTTPS works then it should work). Set environment variable `MCSKINDL_USE_WGET` to `yes` if you prefer using wget
-- jq for processing JSON data (important)
-- base64 for decoding Base64 data (should be included with coreutils or busybox any other implementations that supports decoding)
+- bash (tested with 5.2.x)
+- curl for fetching (if HTTPS works then it should work). Set the `MCSKINDL_USE_WGET` environment variable to `yes` if you prefer using wget
+- jq for processing JSON data (core)
+- base64 for decoding Base64 data (should be included with coreutils or busybox or any other implementations that supports it)
 - sed (for substituting some HTTP URLs to HTTPS, remove any calls of sed if you don't want this behavior.
 
 > [!WARNING]
-> THE CGI Script mode is NOT intended for production use due to performance and security issues.
+> The CGI script mode is NOT intended for production use due to performance and security issues.
 
 ## TODO
 
@@ -21,4 +19,10 @@ mcskindl is a Minecraft: Java Edition player skin downloader in bash(1)
 
 ## Credits
 
-Thanks to [this wiki.vg page](https://wiki.vg/Mojang_API) for providing documentations, https://github.com/koalaman/shellcheck for helping me to catch potential bugs, and also https://github.com/matejak/argbash/ for generating the code to handle command line arguments!
+- <https://minecraft.wiki/w/Mojang_API>: Documentation
+- [shellcheck](https://github.com/koalaman/shellcheck)
+- <https://github.com/matejak/argbash>
+
+---
+
+**NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.**

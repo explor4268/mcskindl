@@ -1,36 +1,35 @@
 #!/usr/bin/env bash
 # 
-# mcskindl is a Minecraft: Java Edition player skin downloader in bash(1)
+# mcskindl is a Minecraft: Java Edition player skin downloader written in bash(1)
 # 
 #          NOT AN OFFICIAL MINECRAFT PRODUCT.
 # NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.
 # 
 # Requirements:
-# - bash (tested with 5.2.x, POSIX shell version might be available later)
+# - bash (tested with 5.2.x)
 # - curl for fetching (if HTTPS works then it should work)
-#   Set environment variable "MCSKINDL_USE_WGET" to "yes" if you prefer
+#   Set the "MCSKINDL_USE_WGET" environment variable to "yes" if you prefer
 #   using wget
-# - jq for processing JSON data (important)
+# - jq for processing JSON data (core)
 # - base64 for decoding Base64 data
-#   (should be included with coreutils or busybox any other implementations
-#   that supports decoding)
+#   (should be included with coreutils or busybox or any other implementations
+#   that supports it)
 # - sed (for substituting some HTTP URLs to HTTPS, remove any calls of sed
 #   if you don't want this behavior.
 # 
 # WARNING!
-# THE CGI Script mode is NOT intended for production use due to performance
+# The CGI script mode is NOT intended for production use due to performance
 # and security issues.
 # 
 # TODO:
 # - Detect if the input is a valid UUID otherwise it is a Username.
 # 
-# Thanks to https://wiki.vg/Mojang_API for providing documentations,
-# https://github.com/koalaman/shellcheck for helping me to catch potential
-# bugs, and also https://github.com/matejak/argbash/ forgenerating the code
-# to handle command line arguments!
+# Credits:
+# https://minecraft.wiki/w/Mojang_API (Documentation)
+# shellcheck: https://github.com/koalaman/shellcheck
+# https://github.com/matejak/argbash
 
-# This is a bash script.
-# This should not be executed with other shell interpreter.
+# This bash script should not be executed with other shell interpreter.
 if [ -z "$BASH_VERSION" ]
 then
 	echo "Sorry, this is a Bash script. This script could only be run with Bash. Exitting." >&2
@@ -255,7 +254,7 @@ fi
 # Failsafe options to avoid empty variable expansions. See:
 # https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html
 # for reference.
-set -e -u
+set -euo pipefail
 
 # Detect invalid usernames
 if [[ -z "$_arg_username" ]]; then
